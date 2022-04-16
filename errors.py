@@ -1,0 +1,2 @@
+class QuestionGroupLimitReached(Exception):
+    pass

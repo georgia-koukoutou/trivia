@@ -1,0 +1,13 @@
+
+# time limit in seconds
+TIMER_PER_GROUP = 180
+QUESTIONS_PER_GROUP = 9
+INVALID_ANSWERS_PER_GROUP_LIMIT = 4
+GROUP_LIMIT_PER_GAME_SESSION = 10
+HIGH_SCORE_FILE = "highscores.json"
+
+DIFFICULTY_OPTIONS = [
+    "Easy",
+    "Medium",
+    "Hard"
+]
