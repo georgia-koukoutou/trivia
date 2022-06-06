@@ -1,5 +1,5 @@
 import json
-
+import itertools 
 import constants
 import utils
 
@@ -21,7 +21,7 @@ def get_leaderboard():
     leaderboard = list(highscores.items())
     # Sort leaderboard list based on the score in descending order
     leaderboard.sort(key=lambda entry: entry[1], reverse=True)
-    return leaderboard
+    return leaderboard[0:10]
 
 
 def get_highscores():
@@ -45,10 +45,17 @@ def update_highscores(username: str, score: int):
     if highscores is None:
         highscores = {}
 
-    if highscores[username] < score:
-        # update only if it's personal highscore
+    
+    if username in highscores:
+        if highscores[username] < score:
+            # update only if it's personal highscore
+            highscores[username] = score
+    else:
         highscores[username] = score
 
+    highscores = dict(sorted(highscores.items(), key=lambda item: item[1], reverse=True))
+    highscores = dict(itertools.islice(highscores.items(), 10)) 
+ 
     try:
         # create file if not exists and open it in write mode
         with open(constants.HIGH_SCORE_FILE, 'w+') as file:
