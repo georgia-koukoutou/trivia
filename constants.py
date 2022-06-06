@@ -11,3 +11,7 @@ DIFFICULTY_OPTIONS = [
     "Medium",
     "Hard"
 ]
+
+BACKGROUND_COLOR = "white"
+THEME_COLOR = "teal"
+ACTIVE_COLOR = "#20b2aa"
