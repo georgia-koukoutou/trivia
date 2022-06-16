@@ -133,6 +133,7 @@ class GamePage(tkinter.Frame):
 
         GameState.get_instance().submit()
         is_highscore: bool = GameState.get_instance().is_highscore()
+        GameState.get_instance().update_highscores()
         
         if GameState.get_instance().timer.get() <= 0:
             showinfo(message='Time is up! Thanks for playing!')
@@ -155,7 +156,6 @@ class GamePage(tkinter.Frame):
                 self.master.go_to_landing_page()
         else:
             if is_highscore:
-                GameState.get_instance().update_highscores()
                 score: int = GameState.get_instance().score.get()
                 messagebox.showinfo("Congratulations", f'New highscore {score}!!!')
 
