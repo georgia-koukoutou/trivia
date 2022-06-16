@@ -30,7 +30,7 @@ class GameState:
             GameState.__instance = self
 
         self.categories: list = []
-        self.username: StringVar = StringVar(value='Darthvader')
+        self.username: StringVar = StringVar(value='')
         self.difficulty: StringVar = StringVar(value='')
         self.category: StringVar = StringVar(value='')
         self.questions: list = []
@@ -195,11 +195,11 @@ class GameState:
 
     def is_valid_difficulty(self) -> bool:
 
-        return utils.is_string_not_blank(self.difficulty.get())
+        return utils.is_string_not_blank(self.difficulty.get()) and self.difficulty.get() != "None"
 
     def is_valid_category(self) -> bool:
 
-        return utils.is_string_not_blank(self.category.get())
+        return utils.is_string_not_blank(self.category.get()) and self.category.get() != "None"
 
     def is_highscore(self) -> bool:
 
