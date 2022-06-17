@@ -1,5 +1,5 @@
 import tkinter
-from tkinter import NO, CENTER, SW, SE, messagebox, YES
+from tkinter import E, NO, CENTER, W, messagebox, YES
 from tkinter.ttk import Treeview
 import constants
 import highscore_client
@@ -90,8 +90,8 @@ class LandingPage(tkinter.Frame):
         # format our column
         table_view.column("#0", width=0, stretch=NO)
         table_view.column("index", anchor=CENTER, width=30, stretch=NO)
-        table_view.column("player", anchor=SW, minwidth=50, stretch=YES)
-        table_view.column("score", anchor=SE, minwidth=40, stretch=YES)
+        table_view.column("player", anchor=W, minwidth=50, stretch=YES)
+        table_view.column("score", anchor=E, minwidth=40, stretch=YES)
 
         # Create Headings
         table_view.heading("#0", text="", anchor=CENTER)
