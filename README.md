@@ -46,5 +46,5 @@ Highscore message:
 
 Leaderboard:
 
-<img src="./leaderboard.PNG" width="60%" height="60%"/>
+<img src="./files/images/leaderboard.PNG" width="60%" height="60%"/>
 
