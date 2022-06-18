@@ -34,15 +34,15 @@ Please keep in mind the following:
 
 Starting screen:
 
-<img src="./starting_screen.PNG" width="60%" height="60%"/>
+<img src="./files/images/starting_screen.PNG" width="60%" height="60%"/>
 
 Game window: 
 
-<img src="./game_window.PNG" width="60%" height="60%"/>
+<img src="./files/images/game_window.PNG" width="60%" height="60%"/>
 
 Highscore message:
 
-<img src="./highscore.PNG" width="60%" height="60%"/>
+<img src="./files/images/highscore.PNG" width="60%" height="60%"/>
 
 Leaderboard:
 
